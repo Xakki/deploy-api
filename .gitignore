@@ -1,0 +1,5 @@
+/.env
+/http-client.env.json
+/config.php
+/pid.txt
+/php.log

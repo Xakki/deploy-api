@@ -1,0 +1,8 @@
+# Deploy AstroBot
+POST {{host}}/api
+Content-Type: application/json
+Accept: application/json
+
+{"project": "{{project}}", "token": "{{project_token}}"}
+
+###
