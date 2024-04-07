@@ -47,7 +47,7 @@ function execCommand(string $dir, array $commands): array
 
 $post = (array) json_decode((string) file_get_contents('php://input'), true);
 
-if ($_SERVER['REQUEST_URI'] === '/api' && count($post)) {
+if (trim($_SERVER['REQUEST_URI'], '/') === 'api' && count($post)) {
 
     $config = include 'config.php';
 
@@ -66,5 +66,5 @@ if ($_SERVER['REQUEST_URI'] === '/api' && count($post)) {
     }
     jsonResponseError('Wrong project');
 } else {
-    echo 'Hello world';
+    jsonResponseError('Hello world');
 }
